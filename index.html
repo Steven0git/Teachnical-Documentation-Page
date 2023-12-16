@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+  <title>JavaScript Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic&display=fallback">
+  <link rel="stylesheet" href="minify.css">
+ 
+  <script>
+  // you can choose theme dark or light, i prefer dark theme
+      const storedTheme = "dark";
+
+      // Follow operating system theme preference
+      if (storedTheme === null && window.matchMedia) {
+        const mq = window.matchMedia('(prefers-color-scheme: dark)');
+        if (mq.matches) {
+          document.documentElement.classList.add('dark-mode');
+        }
+      } else if (storedTheme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+  </script>
+  
+</head>
+<body>
+<nav id="navbar">
+    <header class="header">
+        <div class="header-container">
+            <h1>Documentation Title</h1>
+        </div>
+    </header>
+    <hr class="line"/>
+    <details role="navigation" id="toc" open>
+        <summary>Table of contents</summary>
+        <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#Declare_Variables" class="nav-link">Declare Variables</a></li>
+            <li><a href="#If_And_Else_Statement" class="nav-link">If And Else Statement</a></li>
+            <li><a href="#Function_Declarations" class="nav-link">Function Declarations</a></li>
+            <li><a href="#While_Statement" class="nav-link">While Statement</a></li>
+        </ul>
+    </details>
+</nav>
+<main id="main-doc" data-id="repl" class="interior">
+    <section class="main-section" role="main" id="Introduction">
+        <header>
+            <h2>Introduction</h2>
+        </header>
+  <article>
+    <p>
+  JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its
+    </p>
+  <p>		
+	Environment to provide programmatic control over them. Example:
+	</p>
+
+<pre><code class="language-js"><span class="hljs-keyword">console.log</span>(<span class="hljs-string">"Hello World!"</span>);</code> <button class="copy-button">copy</button></pre>
+  </article>
+</section>
+    <section class="main-section" id="Declare_Variables" role="main">
+        <header>
+            <h2>Declare Variables</h2>
+        </header>
+  <article>
+<p>
+  You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+</p>
+<p>
+  A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).<br />
+</p>
+ <p>
+  This is an example keywords to use: 
+ </p>
+<p>
+  <ul>
+    <li>
+    <code>const</code> for constant variable.
+    </li>
+    <li>
+    <code>let</code> declare variable ES6.
+    </li>
+    <li>
+    <code>var</code> declare variable ES5.
+    </li>
+  </ul>
+ </p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> name = <span class="hljs-string">"Steven"</span>;
+      name = <span class="hljs-string">"Steve"</span>; <span class="hljs-comment">// Uncaught TypeError: Assignment to constant variable.</span>
+</code> <button class="copy-button">copy</button></pre>
+  </article>
+</section>
+
+ <section class="main-section" id="If_And_Else_Statement">
+        <header>
+            <h2>If And Else Statement</h2>
+        </header>
+ <article>
+<p>
+  Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
+  </p>
+<pre><code class="language-js"></code>
+ <span class="hljs-keyword">if</span> (<span class="hljs-variable">condition</span>) {
+  <span class="hljs-comment">//if valid execute</span>
+ } <span class="hljs-keyword">else</span> {
+  <span class="hljs-comment">//if anything else, execute</span>
+ }
+<button class="copy-button">copy</button></pre>
+ </article>
+</section>
+<section class="main-section" id="Function_Declarations">
+        <header>
+            <h2>Function Declarations</h2>
+        </header>
+  <article>
+<p>
+ A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+ <ul>
+   <li>
+ The name of the function.
+   </li>
+   <li>
+A list of arguments to the function, enclosed in parentheses and separated by commas.
+   </li>
+   <li>
+The JavaScript statements that define the function, enclosed in curly brackets, { }.
+   </li>
+ </ul>
+</p>
+<p>
+For example, the following code defines a simple function named square:
+</p>
+ <pre>
+   <code class="language-js">
+ <span class="hljs-keyword">function</span> Square(<span class="hljs-variable">a</span>) {
+   <span class="hljs-keyword">return </span> <span class="hljs-variable">a</span>*<span class="hljs-variable">a</span>;
+   }</code>
+   <button class="copy-button">copy</button>
+ </pre>
+  </article>
+</section>
+
+<section class="main-section" id="While_Statement">
+        <header>
+            <h2>While Statement</h2>
+        </header>
+  <article>
+    <p>
+      A while statement executes its statements as long as a specified condition evaluates to true. 
+    </p>
+    <p>
+      A while statement looks as follows:
+    </p>
+ <pre><code class="language-js"><span class="hljs-keyword">while</span> (<span class="hljs-built_in">condition</span>) {
+  <span class="hljs-comment">// the while function always running</span>
+  <span class="hljs-comment">// when the condition is true, the while function will be stopped</span>
+ }
+</code> <button class="copy-button">copy</button></pre>
+  </article>
+</section>
+
+      
+ </main>
+</body>
+
+</html>
